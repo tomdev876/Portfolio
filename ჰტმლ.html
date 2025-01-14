@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        /* ზოგადი სტილი */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Home ლინკისთვის */
+        a.home {
+            background-color: #C48E72;
+        }
+
+        /* Home ლინკის ჰოვერის ეფექტი */
+        a.home:hover {
+            background-color: #C48E72;
+            color: white;
+        }
+
+        /* სხვა ლინკების სტილი */
+        a:hover {
+            background-color: #575757;
+            color: #f4f4f4;
+        }
+
+        /*   #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 50px 20px;
+            margin: 20px;
+            background-color: #C48E72;
+            color: white;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-img img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            opacity: 0.3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .home-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .home h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .home p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 50px 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #333;
+        }
+
+        section p {
+            color: #333;
+        }
+
+        /* Contact სექციის სტილი */
+        #contact {
+            background-color: #333; /* მუქი ფონდი */
+            color: white; /* თეთრი ტექსტი */
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        /* Contact ფორმის სტილი */
+        #contact-form {
+            max-width: 400px; /* ვიწრო ფორმა */
+            margin: 20px auto;
+            background: #444; /* ღია მუქი ფონდი */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* "Contact Us" ტექსტი */
+        #contact-form h3 {
+            color: #C48E72;
+            margin-bottom: 20px;
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            width: 100%;
+            padding: 8px; /* შემცირებული padding */
+            margin: 8px 0; /* შემცირებული სივრცე */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #222; /* მუქი ფონდი */
+            color: white;
+        }
+
+        #contact-form button {
+            background-color: #C48E72;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #contact-form button:hover {
+            background-color: #A67859;
+        }
+
+        /* Services სექციის სტილი */
+        .service {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .service:hover {
+            background-color: #e4e4e4;
+        }
+
+        .service h3 {
+            font-size: 1.5rem;
+            color: #C48E72;
+            margin: 0;
+        }
+
+        .service p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .service-details {
+            display: none;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+    </style>
+    <title>Website with Navigation</title>
+</head>
+<body>
+    <nav>
+        <a href="#home" class="home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+ <a href="#Achievements ">Achievements </a>
+
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home">
+        <div class="portfolio-container">
+        
+            <img src="mariamis.png" alt="Portfolio Image">
+        </div>
+        <div class="portfolio-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Explore my work and projects.</p>
+        </div>
+    </section>
+</body>
+
+        </div>
+    </section>
+
+
+    <!-- Services სექცია -->
+    <section id="services">
+        <h2>Services</h2>
+        
+     <!-- Architectural Projects -->
+<div class="service" onclick="toggleDetails('arch')">
+    <h3>Architectural Projects</h3>
+    <p>Designing and planning architectural solutions for various types of buildings.</p>
+    <div id="arch" class="service-details">
+        <p>I specialize in residential, commercial, and industrial architectural projects. My goal is to create functional and aesthetically pleasing spaces that meet my clients' needs.</p>
+        <p>I offer a variety of architectural solutions:</p>
+        <button onclick="showGallery()">View More</button>
+        <div class="gallery" id="gallery" style="display: none;">
+            <a href="unnamed.pdf" target="_blank">Project 1</a>
+            <a href="project2.pdf" target="_blank">Project 2</a>
+            <a href="project3.pdf" target="_blank">Project 3</a>
+            <a href="project4.pdf" target="_blank">Project 4</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showGallery() {
+        const gallery = document.getElementById('gallery');
+        if (gallery.style.display === 'none') {
+            gallery.style.display = 'block';
+        } else {
+            gallery.style.display = 'none';
+        }
+    }
+</script>
+
+
+
+            </div>
+        </div>
+
+        <!-- Graphic Design -->
+        <div class="service" onclick="toggleDetails('graphic')">
+            <h3>Graphic Design</h3>
+            <p>Creating visually appealing and functional designs for various platforms.</p>
+            <div id="graphic" class="service-details">
+                <p>I offer graphic design services, including logo design, branding, advertising materials, and more. I ensure that your visual identity aligns with your brand’s values and goals.</p>
+
+            </div>
+        </div>
+
+        <!-- Civil Engineering -->
+        <div class="service" onclick="toggleDetails('civil')">
+            <h3>Civil Engineering</h3>
+            <p>Designing infrastructure and ensuring structural integrity of buildings and roads.</p>
+            <div id="civil" class="service-details">
+                <p>I provide comprehensive civil engineering services for road construction, buildings, and structural assessments, ensuring safety and durability in all projects.</p>
+            </div>
+        </div>
+
+        <!-- Other Services -->
+        <div class="service" onclick="toggleDetails('other')">
+            <h3>Other</h3>
+            <p>Providing custom solutions tailored to unique client needs.</p>
+            <div id="other" class="service-details">
+                <p>Whether it's consultation, project management, or any other specialized service, I offer flexible and tailored solutions to meet your specific requirements.
+
+I am proficient in office software and capable of working in Excel, as well as using various social media platforms thoroughly. I can create presentations in PowerPoint and hold a B2 level of English proficiency. Additionally, I am skilled in using Paint and Paint 3D, as well as editing tools like CapCut and other editing programs.
+
+I am experienced in utilizing different types of maps, preparing internal survey drawings, and addressing architectural, structural, and design-related matters effectively:</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills სექცია -->
+    <section id="skills">
+        <h2>Skills</h2>
+        
+        <!-- Skill 1 -->
+        <div class="service" onclick="toggleDetails('remoteWork')">
+            <h3>Remote Work Skills</h3>
+            <p>Ability to manage time effectively and work independently in a remote environment.</p>
+            <div id="remoteWork" class="service-details">
+                <p>Expertise in remote project management, communication, and staying organized in a virtual setting.</p>
+            </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="service" onclick="toggleDetails('clientCommunication')">
+            <h3>Client Communication</h3>
+            <p>Effectively collaborate with clients to understand and meet their needs.</p>
+            <div id="clientCommunication" class="service-details">
+                <p>Proficient in digital communication tools and ensuring client satisfaction through regular updates and feedback loops.</p>
+            </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="service" onclick="toggleDetails('graphicDesign')">
+            <h3>Graphic Design</h3>
+            <p>Ability to create visually appealing designs for websites, advertisements, and branding.</p>
+            <div id="graphicDesign" class="service-details">
+                <p>Strong skills in design software like Photoshop to deliver creative designs for print and digital mediums.</p>
+            </div>
+        </div>
+
+        <!-- Add more skills as needed -->
+    </div>
+        </div>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Education Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .education-item {
+            border: 2px solid #333;
+            border-radius: 25px;
+            padding: 15px 20px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .education-item:hover {
+            background-color: #ececec;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-details {
+            margin-top: 10px;
+            display: none;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="education">
+        <h2>Education</h2>
+
+        <!-- Education Item 1 -->
+        <div class="education-item" onclick="toggleDetails('edu1')">
+            <h3>Mukhri Public School</h3>
+            <p>Graduated with honors and received a computer from the Ministry of Education.</p>
+            <div id="edu1" class="education-details">
+                <p>Studied until 9th grade, achieving excellent results (10 out of 10). Recognized by the Ministry of Education for outstanding academic performance.Participated in the Anaklia Future Camp, receiving a certificate of participation and engaging in forward-thinking activities.Successfully participated in the Georgian national intellectual competition “Etaloni” and received a certificate of recognition.</p>
+            </div>
+        </div>
+
+        <!-- Education Item 2 -->
+        <div class="education-item" onclick="toggleDetails('edu2')">
+            <h3>Vaziani Public School</h3>
+            <p>Graduated with a silver medal for academic excellence.</p>
+            <div id="edu2" class="education-details">
+                <p>Studied from 9th to 12th grade. Though narrowly missing a gold medal, graduated with a silver medal for exceptional academic achievements.</p>
+            </div>
+        </div>
+
+        <!-- Education Item 3 -->
+        <div class="education-item" onclick="toggleDetails('edu3')">
+            <h3>NB Academy</h3>
+            <p>Completed ArchiCAD 25 and Adobe Photoshop courses with distinction.</p>
+            <div id="edu3" class="education-details">
+                <p>Earned bilingual certificates for professional-level training in ArchiCAD 25 and Adobe Photoshop, demonstrating advanced design skills.</p>
+            </div>
+        </div>
+
+        <!-- Education Item 4 -->
+        <div class="education-item" onclick="toggleDetails('edu4')">
+            <h3>Student At Georgian Technical University.</h3>
+            <p></p>
+            <div id="edu4" class="education-details">
+                <p>Currently studying Civil Engineering, focusing on structural and infrastructure design.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
+     <!-- Add more skills as needed -->
+    </div>
+        </div>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Education Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .achievements-item {
+            border: 2px solid #333;
+            border-radius: 25px;
+            padding: 15px 20px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .achievements-item:hover {
+            background-color: #ececec;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-details {
+            margin-top: 10px;
+            display: none;
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+
+        <!-- Achievement Item 1 -->
+        <div class="education-item" onclick="toggleDetails('ach1')">
+            <h3>Mukhri Public School</h3>
+            <p>Graduated with honors and received a computer from the Ministry of Education.</p>
+            <div id="ach1" class="education-details">
+                <p>Studied until 9th grade, achieving excellent results (10 out of 10).</p>
+                <p>Recognized by the Ministry of Education for outstanding academic performance.</p>
+                <p>Participated in the Anaklia Future Camp, receiving a certificate of participation and engaging in forward-thinking activities.</p>
+                <p>Successfully participated in the Georgian national intellectual competition “Etaloni” and received a certificate of recognition.</p>
+            </div>
+        </div>
+
+        <!-- Achievement Item 2 -->
+        <div class="education-item" onclick="toggleDetails('ach2')">
+            <h3>Vaziani Public School</h3>
+            <p>Graduated with a silver medal for academic excellence.</p>
+            <div id="ach2" class="education-details">
+                <p>Studied from 9th to 12th grade.</p>
+                <p>Narrowly missed a gold medal but graduated with a silver medal for exceptional academic achievements.</p>
+            </div>
+        </div>
+
+        <!-- Achievement Item 3 -->
+        <div class="education-item" onclick="toggleDetails('ach3')">
+            <h3>NB Academy</h3>
+            <p>Completed ArchiCAD 25 and Adobe Photoshop courses with distinction.</p>
+            <div id="ach3" class="education-details">
+                <p>Earned bilingual certificates for professional-level training in ArchiCAD 25 and Adobe Photoshop.</p>
+                <p>Demonstrated advanced design skills in both programs.</p>
+            </div>
+        </div>
+
+        <!-- Achievement Item 4 -->
+        <div class="education-item" onclick="toggleDetails('ach4')">
+            <h3>Georgian Technical University</h3>
+            <p>Currently studying Civil Engineering.</p>
+            <div id="ach4" class="education-details">
+                <p>Focusing on structural and infrastructure design.</p>
+                <p>Engaged in projects and coursework related to modern engineering challenges.</p>
+                                
+
+          
+            </div>
+        </div>  
+</body>
+</html
+    <!-- Contact სექცია -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <div id="contact-form">
+            <h3>Contact Me</h3>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function toggleDetails(serviceId) {
+            const details = document.getElementById(serviceId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 50px 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .portfolio-container {
+            max-width: 800px;
+            position: relative;
+            text-align: center;
+        }
+
+        .portfolio-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px; /* ოდნავ ოვალური ფორმა */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            object-fit: cover; /* ფოტოს სავსე გადაფარვა */
+        }
+
+        .portfolio-content {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color:#f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            margin-top: 20px; /* ტექსტი რომ არ გადაიხუროს ფოტოზე */
+        }
+
+        .portfolio-content h2 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+
+        .portfolio-content p {
+            margin-top: 10px;
+            font-size: 1.2rem; /* უფრო მკაფიოდ წაკითხული ტექსტი */
+        }
+
+    </style>
+
+    <title>My Portfolio</title>
+
+</head>
+<body>
+  
+    </section>
+     </div>
+    </div>
+</section>
+
+<!-- Social Media Icons Section -->
+<section id="social">
+
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="social-icon facebook">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="social-icon twitter">Twitter</a>
+        <a href="https://linkedin.com" target="_blank" class="social-icon linkedin">LinkedIn</a>
+        <a href="https://instagram.com" target="_blank" class="social-icon instagram">Instagram</a>
+    </div>
+</section>
+
+<style>
+    /* Social Icons Styling */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        text-decoration: none;
+        padding: 10px 15px;
+        background-color: #333; /* Default dark gray background */
+        color: grey;
+        font-size: 1.5rem;
+        transition: background-color 0.3s, color 0.3s; /* Adding transition for color change */
+    }
+
+    .social-icon:hover {
+        background-color: #f4f4f4; /* Lighter gray background on hover */
+        color: #333; /* Dark color for the icon when hovered */
+    }
+
+    .facebook {
+        background-color: #f4f4f4; /* Facebook default blue */
+    }
+
+    .facebook:hover {
+        background-color: #f4f4f4; /* Lighter gray on hover */
+        color: #333; /* Dark color for the icon */
+    }
+
+    .twitter {
+        background-color: #f4f4f4; /* Twitter default blue */
+    }
+
+    .twitter:hover {
+        background-color: #f4f4f4; /* Lighter gray on hover */
+        color: #333; /* Dark color for the icon */
+    }
+
+    .linkedin {
+        background-color: #f4f4f4; /* LinkedIn default blue */
+    }
+
+    .linkedin:hover {
+        background-color: #f4f4f4; /* Lighter gray  */
+        color: #f4f4f4; /* Dark color for the icon */
+    }
+
+    .instagram {
+        background-color: #f4f4f4; /* Instagram default pinkish red */
+    }
+
+    .instagram:hover {
+        background-color: #f4f4f4; /* Lighter gray on hover */
+        color: #f4f4f4; /* Dark color for the icon */
+    }
+</style>
+</body>
+</html>   
